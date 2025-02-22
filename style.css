@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+nav{
+    background-color: red;
+    width: 100%;
+    height: 80px;
+}
+.flex{
+    display: flex;
+}
+.box{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.flex .red{
+    background-color: blue;
+}
+.flex .blue{
+    background-color: green;
+}
