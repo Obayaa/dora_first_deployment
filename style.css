@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Inter";
 }
 body {
   width: 100%;
@@ -14,6 +14,7 @@ body {
 .wrapper {
   width: 100%;
   max-width: 1540px;
+  padding: 40px;
 }
 nav {
   background-color: white;
@@ -22,7 +23,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
+  padding: 10px 0px;
   border-bottom: 1px solid #f2f4f7;
 }
 .logo_nav_items {
@@ -51,21 +52,98 @@ a {
   width: 100%;
   height: 80vh;
   display: flex;
-  padding: 40px;
-  gap: 10px;
+  padding: 40px 0;
 }
 .box {
   background-color: white;
   width: 100%;
-  min-width: 20rem;
+  min-width: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 32px;
+  gap: 48px;
+  padding-right: 32px;
+}
+.part1 {
+  padding-right: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.part1 h1 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 72px;
+  margin-right: 50px;
+}
+.part1 p {
+  color: #475467;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  /* width: fit-content; */
+  margin-right: 11.75rem;
+}
+.hiring {
+  background-color: #f9f5ff;
+  color: #6941c6;
+  padding: 10px 5px;
+  border: 1px solid #e9d7fe;
+  border-radius: 20px;
+  width: fit-content;
+}
+.hiring span {
+  color: #6941c6;
+  padding: 5px 10px;
+  margin-right: 10px;
+  /* margin: 5px 10px; */
+  background-color: white;
+  border: 1px solid #e9d7fe;
+  border-radius: 20px;
+}
+.hiring i {
+  color: #9e77ed;
+  padding: 0 10px;
 }
 .flex img {
   width: 100%;
-  min-width: 35rem;
+  min-width: 20rem;
+}
+.email_capture {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 16px; */
+  width: fit-content;
+}
+.email_capture a {
+  padding: 12px 20px;
+  background-color: #7f56d9;
+  border: #7f56d9;
+  color: white;
+  border-radius: 8px;
+  height: fit-content;
+}
+.email_field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #475467;
+}
+.email_field input {
+  padding: 12px 14px;
+  border-radius: 5px;
+  width: 18rem;
+  border: 1px solid #d0d5dd;
+  outline: none;
+  font-size: 16px;
+}
+.email_field input::placeholder {
+  color: #667085;
+  opacity: 1;
+}
+.email_field span {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .buttons {
   display: flex;
@@ -78,6 +156,60 @@ a {
   border-radius: 8px;
   color: white;
 }
+@media only screen and (max-width: 1200px) {
+  .email_field input {
+    width: 16rem;
+  }
+  .box {
+    padding-right: 1rem;
+  }
+  .part1 {
+    padding-right: 20px;
+  }
+  .part1 h1 {
+    margin-right: 2.5rem;
+  }
+  .part1 p {
+    margin-right: 6rem;
+  }
+  .email_capture {
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .box {
+    padding-right: 0rem;
+  }
+  .part1 {
+    padding-right: 5px;
+  }
+  .part1 h1 {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+  .part1 p {
+    font-size: 16px;
+    margin-right: 4rem;
+  }
+  
+  .email_field p{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  .flex {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .flex img {
+    height: 50vh;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .logo_nav_items {
     flex-wrap: wrap;
@@ -86,12 +218,77 @@ a {
   nav {
     flex-wrap: wrap;
   }
+  .buttons {
+    gap: 1rem;
+  }
 }
-@media only screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 600px) {
+  .nav_items ul{
+    gap: 0.2rem;
+  }
+  .buttons {
+    margin-top: 5px;
+  }
+  .wrapper {
+    padding: 13px;
+  }
+  .box {
+    gap: 32px;
+    padding-right: 0px;
+    width: 100%;
+  }
+  .part1 {
+    padding-right: 0;
+  }
+  .part1 h1 {
+    font-size: 2.5rem;
+    line-height: 50px;
+    margin-right: 0;
+  }
+  .part1 p {
+    margin-right: 0;
+  }
+  .hiring {
+    width: 100%;
+  }
+  .buttons {
+    gap: 1rem;
+  }
   .flex {
-    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .email_field p{
+    flex-direction: row;
+  }
+  .email_capture {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .email_capture a {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .wrapper {
+    padding: 0px;
+  }
+  .nav-items ul {
+    gap: 5px;
+  }
+  .hiring span{
+    margin-right: 5px;
   }
   .flex img {
-    height: 70vh;
+    min-width: 10rem;
+  }
+  .part1 {
+    padding-right: 2px;
+  }
+  .part1 h1 {
+    width: 100%;
   }
 }
